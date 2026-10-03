@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266015875012",
+    "project_id": "tiwigsstrands",
+    "storage_bucket": "tiwigsstrands.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266015875012:android:1826822e40528738678e91",
+        "android_client_info": {
+          "package_name": "com.tiwigsstrand.tiwigsstrand"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0uYAS59IJZNGx71Wmws46_hC_u4lWoLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

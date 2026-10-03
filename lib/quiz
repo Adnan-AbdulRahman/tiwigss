@@ -1,0 +1,115 @@
+cd /home/claude/quiz && cat >> gen.js << 'EOF'
+
+// Print full answer list with text
+let outputLines = [];
+questions.forEach((item, idx) => {
+  outputLines.push(`${idx+1}. ${letters[item.a]} - ${item.o[item.a]}`);
+});
+fs.writeFileSync("full_answers.txt", outputLines.join("\n"));
+EOF
+node gen.js
+cat full_answers.txt
+Output
+
+Total questions: 100
+done, wrote file
+1. B - A virus needs a host program to spread; a worm spreads on its own across networks
+2. C - Disguises itself as something legitimate or useful
+3. B - Encrypts a victim's files and demands payment to unlock them
+4. B - Analysis, detection, and defense only, never creation
+5. A - A simulated computer running inside your real computer
+6. A - Mistakes inside it can be undone/reset without affecting the real machine
+7. C - Save a checkpoint of the VM's state to revert back to later
+8. C - It isolates the VM from the real internet, preventing any spread
+9. A - Only run/analyze them inside an isolated, snapshot-protected VM
+10. A - Layering multiple different detection/defense methods so gaps in one are covered by another
+11. C - pwd
+12. B - cd
+13. C - /c/Users/Sarah/Desktop
+14. A - Copies the folder and its contents recursively
+15. A - It permanently deletes files/folders with no Recycle Bin recovery
+16. B - ./hello.exe
+17. B - Feeds the output of one command into the next command
+18. B - >>
+19. C - gcc
+20. C - which gcc
+21. D - Identifies a file's real type based on its content, not its name
+22. D - An extension is just text in the filename and can be changed without altering the actual file content
+23. D - invoice.pdf
+24. D - Show file name extensions
+25. D - Creating a unique fingerprint of a file's exact content
+26. D - It changes completely
+27. B - Checks it against dozens of antivirus engines and shows the results
+28. B - You get threat intelligence without ever possessing or running the malicious file
+29. A - Portable Executable
+30. A - The file's code is compressed/obfuscated, often to evade antivirus scanning
+31. C - .docm/.xlsm/.pptm
+32. C - Sequences of readable text embedded in the file
+33. B - Reverse engineering / analyzing compiled programs
+34. A - The NSA
+35. A - Disassembly produces assembly language; decompilation reconstructs C-like readable code
+36. B - The Decompile view
+37. C - A list of every function identified in the binary
+38. C - Every readable text string found in the binary
+39. A - Compares two values, usually before a conditional jump
+40. A - To remove helpful function/variable names and make analysis harder
+41. D - The Defined Strings window
+42. B - Showing every place a function or variable is used elsewhere in the program
+43. B - It removes intimidation by proving reverse engineering is a translation process, not magic
+44. C - Original variable names are not stored in compiled code unless debug symbols are present
+45. C - Dynamic analysis involves actually running the file safely; static does not
+46. D - A specific, observable piece of evidence that malicious activity has occurred
+47. D - It shows what 'normal' system activity looks like, so abnormal activity can be spotted later
+48. D - Parent-child relationships between running processes
+49. D - A classic red flag suggesting a malicious macro
+50. D - Real-time file, registry, and process activity
+51. D - Unfiltered output at real-world scale is overwhelming and unusable
+52. B - Network packets passing through a chosen interface
+53. A - Malware contacting a remote server for instructions or to send stolen data
+54. A - A browser-based automated malware sandbox with behavior reports
+55. A - Everything configured to start automatically on a system (persistence mechanisms)
+56. C - Which specific process owns each network connection
+57. C - Attackers using legitimate, pre-installed tools (like PowerShell or PsExec) to avoid detection
+58. A - Starting late means missing the earliest, often most revealing, actions
+59. A - Writing pattern-matching rules to detect malware characteristics
+60. A - At least one defined string must match
+61. B - It can produce many false positives by matching too broadly
+62. C - Whether the file starts with the 'MZ' PE executable signature
+63. C - Generate a SHA-256 hash of a file's content
+64. A - It opens the file in binary mode, essential since you're hashing raw bytes
+65. A - Recursively scan through all subfolders, not just one flat folder
+66. B - A fake, vulnerable-looking system designed to attract and log attacker behavior
+67. B - An SSH/Telnet server to log attacker login attempts and commands
+68. C - Security Information and Event Management
+69. C - It centralizes logs from many sources and can correlate patterns across all of them
+70. A - Only scan/test systems you own or have explicit written permission to test
+71. D - The unauthorized access itself, regardless of resulting damage
+72. D - Privately reporting a vulnerability to the owner/vendor and allowing reasonable time to fix it before disclosure
+73. D - Detects the specific software/version running on open ports
+74. D - It is deliberately filled with old, vulnerable software for safe training purposes
+75. D - To provide browser-based, legal, guided environments for practicing security skills
+76. D - Local Area Network
+77. D - Layer 3 (Network)
+78. A - Layer 2 (Data Link)
+79. A - The 7 layers of the OSI model, top to bottom
+80. C - 192.168.0.0 - 192.168.255.255
+81. C - Which part of an IP address is the network portion and which is the host portion
+82. C - 192.168.1
+83. A - NAT (Network Address Translation)
+84. A - IP addresses
+85. B - Human-readable domain names into IP addresses
+86. C - Connectivity and latency (response time) to a destination
+87. C - Every intermediate router (hop) along the path to a destination
+88. A - Connect devices within the same local network using MAC addresses
+89. A - Hubs broadcast to every device, wasting bandwidth and creating a security weakness
+90. B - Connect different networks together and make forwarding decisions using IP addresses
+91. B - An access point extends a network wirelessly but does not connect different networks together or perform NAT, unlike a router
+92. C - Filter network traffic based on security rules
+93. C - Track ongoing connections and automatically allow their expected return traffic
+94. A - Block everything by default, explicitly allow only what's needed
+95. B - Configuring a router to forward specific incoming traffic to a specific internal device
+96. D - The physical network hardware itself
+97. C - 6
+98. D - The manufacturer of the network card
+99. D - FF:FF:FF:FF:FF:FF
+100. A - ARP (Address Resolution Protocol)
